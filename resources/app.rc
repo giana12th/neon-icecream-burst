@@ -1,0 +1,9 @@
+#include <windows.h>
+#include "resource.h"
+
+STRINGTABLE
+BEGIN
+    IDS_DESCRIPTION "Neon Icecream Burst"
+END
+
+IDR_PARTICLE_SVG RCDATA "particle.svg"
