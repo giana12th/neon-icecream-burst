@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <cmath>
 #include <cstdio>
+#include <numbers>
 #include <span>
 
 #include "params.h"
@@ -226,7 +227,7 @@ void Renderer::TrySpawn(float unit) {
 
 Particle Renderer::SpawnParticle(float unit) {
     Particle p;
-    p.angle = RandomFloat(0.0f, 2 * D2D1::FloatPI());  // 以後固定（直線移動）
+    p.angle = RandomFloat(0.0f, 2 * std::numbers::pi_v<float>);  // 以後固定（直線移動）
     p.distance = 0.0f;
     p.speed = RandomFloat(params::kSpeedMin, params::kSpeedMax) * unit;
     p.scale = params::kInitialScale;
